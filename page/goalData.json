@@ -1,0 +1,67 @@
+{
+  "day": "17",
+  "dailyGoals": [
+    {
+      "goalType": "game",
+      "goalName": "打通最终幻想15",
+      "goalContent": "打通一章主线",
+      "goalChecked": true
+    },
+    {
+      "goalType": "study",
+      "goalName": "21天养成喝水习惯",
+      "goalContent": "看一张网课",
+      "goalChecked": false
+    }
+  ],
+  "allGoals": [
+    {
+      "goalName": "打通最终幻想15",
+      "goalProgress": 0.60
+    },
+    {
+      "goalName": "21天养成喝水习惯",
+      "goalProgress": 0.35
+    },
+    {
+      "goalName": "数据库",
+      "goalProgress": 0.8
+    }
+  ]
+}
+/*
+        var goalData = require('./goalData.json');
+        var dailyGoals = goalData.dailyGoals;
+        var allGoals = goalData.allGoals; 
+        var dailyGoalRows = [];
+        var allGoals = [];
+        
+        for (var i in dailyGoals){
+          var dailyGoal = dailyGoals[i];
+          //目标类型 内容 check否
+          var row ={
+            <View>
+              <Image/>
+              <View></View>
+              <Image/>
+            </View>
+          };
+          dailyGoalRows.push(row);
+        }
+
+        for (var i in allGoals){
+          var allGoal = allGoals[i];
+          //目标类型 内容 check否
+          var row ={
+            <View>
+              <Text>allGoal.goalName</Text>
+              <View style={styles.progressOut}>
+                  <View style={styles.progressIn}>
+
+                  </View>
+              </View>
+            </View>
+          };
+          allGoalRows.push(row);
+        }
+    */
