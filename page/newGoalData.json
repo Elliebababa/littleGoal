@@ -1,0 +1,84 @@
+payload ={
+  'message-type':'request_newgoalsformat',
+  'goalSize':'small',
+  goalType:'health' or 'study' or 'money'
+}
+
+expected={
+  'newGoalsFormat':[
+    '看XX书XX页',
+    '背XX个单词',
+  ]
+}
+
+大目标上传上传4个字段：消息类型、目标大小、目标类型、目标内容；返回1个字段目标规划建议（实际上是其他人的目标规划）
+一条目标规划建议的内容有：目标内容goal，目标阶段stepCount，阶段内容step，每一阶段的内容有阶段数no，持续时间last，阶段目标goalName，阶段日常任务goalContent，任务频率frequency
+
+
+payload ={
+  'message-type':'request_newgoalsadvice',
+  'goalSize':'big',
+  goalType:'health' or 'study' or 'money',
+  goal:'在珠江新城买房子',
+}
+
+expected={
+  'newGoalsAdvice':[
+    {'goal':'买一栋房子',
+      'stepCount':2,
+      'step':[
+        {
+          'no':1,
+          'last':'720days',
+          'goalName':'存首期',
+          'goalContent':'存5000元',
+          'frequency':30,
+        },
+        {
+          'no':2,
+          'last':'720days',
+          'goalName':'供房子',
+          'goalContent':'存5000元',
+          'frequency':30,
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+{
+  "day": "17",
+  "dailyGoals": [
+    {
+      "goalType": "game",
+      "goalName": "打通最终幻想15",
+      "goalContent": "打通一章主线",
+      "goalChecked": true
+    },
+    {
+      "goalType": "study",
+      "goalName": "21天养成喝水习惯",
+      "goalContent": "看一张网课",
+      "goalChecked": false
+    }
+  ],
+  "allGoals": [
+    {
+      "goalName": "打通最终幻想15",
+      "goalProgress": 0.60
+    },
+    {
+      "goalName": "21天养成喝水习惯",
+      "goalProgress": 0.35
+    },
+    {
+      "goalName": "数据库",
+      "goalProgress": 0.8
+    }
+  ]
+}
+
